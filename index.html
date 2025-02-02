@@ -12,14 +12,18 @@
     </header>
     <main>
         <input type="text" id="promptInput" placeholder="Descreva sua estampa personalizada">
-        <div class="container">
-            <aside>
-                <div class="color-option" data-color="#000000" style="background-color: #000000;"></div>
-                <div class="color-option" data-color="#FFFFFF" style="background-color: #FFFFFF; border: 1px solid #000;"></div>
-                <div class="color-option" data-color="#FFFF00" style="background-color: #FFFF00;"></div>
-                <div class="color-option" data-color="#00008B" style="background-color: #00008B;"></div>
-                <div class="color-option" data-color="#006400" style="background-color: #006400;"></div>
-                <div class="color-option" data-color="#808080" style="background-color: #808080;"></div>
+       <div class="color-picker">
+    <!-- Botões de cor existentes -->
+    <button class="color-btn" data-color="#000000" style="background-color: #000000;"></button>
+    <button class="color-btn" data-color="#FFFFFF" style="background-color: #FFFFFF;"></button>
+    <button class="color-btn" data-color="#FFFF00" style="background-color: #FFFF00;"></button>
+    <button class="color-btn" data-color="#00008B" style="background-color: #00008B;"></button>
+    <button class="color-btn" data-color="#006400" style="background-color: #006400;"></button>
+    <button class="color-btn" data-color="#808080" style="background-color: #808080;"></button>
+    <!-- Novo botão para a cor vermelha -->
+    <button class="color-btn" data-color="#FF0000" style="background-color: #FF0000;"></button>
+
+
             </aside>
             <section>
                 <svg id="tshirt" viewBox="0 0 200 200">
