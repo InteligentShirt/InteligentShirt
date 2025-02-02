@@ -7,17 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
     colorButtons.forEach(button => {
         button.addEventListener('click', () => {
             const color = button.getAttribute('data-color');
-            shirt.querySelector('path').setAttribute('fill', color);
+            shirt.style.fill = color;
         });
     });
 
     finalizeBtn.addEventListener('click', () => {
         const promptText = promptInput.value;
-        const shirtColor = shirt.querySelector('path').getAttribute('fill');
-        const supplierUrl = 'URL_DO_FORNECEDOR'; // Substitua pela URL real do fornecedor
-
-        // Redireciona para o site do fornecedor com os parâmetros necessários
-        window.location.href = `${supplierUrl}?text=${encodeURIComponent(promptText)}&color=${encodeURIComponent(shirtColor)}`;
+        if (promptText) {
+            // Aqui você pode adicionar a lógica para enviar os dados para o fornecedor
+            alert(`Compra finalizada com o texto: "${promptText}"`);
+        } else {
+            alert('Por favor, insira um texto personalizado.');
+        }
     });
 });
 
