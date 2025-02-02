@@ -1,6 +1,15 @@
 document.querySelectorAll('.color-option').forEach(item => {
     item.addEventListener('click', event => {
-        const color = event.target.getAttribute('data-color');
+        const colorButtons = document.querySelectorAll('.color-btn');
+const shirt = document.getElementById('shirt');
+
+colorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const color = button.getAttribute('data-color');
+        shirt.style.fill = color;
+    });
+});
+
         const tshirt = document.getElementById('tshirt').querySelector('path');
         tshirt.setAttribute('fill', color);
     });
@@ -13,12 +22,6 @@ document.getElementById('finalizarCompra').addEventListener('click', () => {
     window.location.href = fornecedorUrl;
 });
 
-const colorButtons = document.querySelectorAll('.color-btn');
-const shirt = document.getElementById('shirt');
 
-colorButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const color = button.getAttribute('data-color');
-        shirt.style.fill = color;
-    });
-});
+
+
