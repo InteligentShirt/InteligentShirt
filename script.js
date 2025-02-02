@@ -13,3 +13,12 @@ document.getElementById('finalizarCompra').addEventListener('click', () => {
     window.location.href = fornecedorUrl;
 });
 
+const colorButtons = document.querySelectorAll('.color-btn');
+const shirt = document.getElementById('shirt');
+
+colorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const color = button.getAttribute('data-color');
+        shirt.style.fill = color;
+    });
+});
