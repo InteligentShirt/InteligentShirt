@@ -1,1 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#promptInput {
+    margin: 20px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+section {
+    position: relative;
+}
+
+svg {
+    width: 200px;
+    height: 200px;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+#finalizarCompra {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
