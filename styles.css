@@ -3,49 +3,55 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
 }
 
 header {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
     text-align: center;
-    padding: 20px;
-    background-color: #f8f8f8;
 }
 
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-#promptInput {
-    margin: 20px 0;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    font-size: 16px;
+header h1 {
+    color: #fff;
+    margin: 0;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top: 20px;
+    position: relative;
 }
 
-aside {
+#prompt-input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.shirt-container {
+    width: 200px;
+    height: 200px;
     display: flex;
-    flex-direction: column;
-    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#shirt {
+    width: 100%;
+    height: 100%;
 }
 
 .color-picker {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 10px;
+    right: -50px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -56,28 +62,11 @@ aside {
     margin: 5px 0;
     border: none;
     cursor: pointer;
-
-
 }
 
-section {
-    position: relative;
-}
-
-svg {
-    width: 200px;
-    height: 200px;
-}
-
-footer {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
-
-#finalizarCompra {
+#finalize-btn {
+    margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
-
