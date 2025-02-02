@@ -1,25 +1,24 @@
-document.querySelectorAll('.color-option').forEach(item => {
-    item.addEventListener('click', event => {
-        const colorButtons = document.querySelectorAll('.color-btn');
-const shirt = document.getElementById('shirt');
+document.addEventListener('DOMContentLoaded', () => {
+    const colorButtons = document.querySelectorAll('.color-btn');
+    const shirt = document.getElementById('shirt');
+    const finalizeBtn = document.getElementById('finalize-btn');
+    const promptInput = document.getElementById('prompt-input');
 
-colorButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const color = button.getAttribute('data-color');
-        shirt.style.fill = color;
+    colorButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const color = button.getAttribute('data-color');
+            shirt.querySelector('path').setAttribute('fill', color);
+        });
     });
-});
 
-        const tshirt = document.getElementById('tshirt').querySelector('path');
-        tshirt.setAttribute('fill', color);
+    finalizeBtn.addEventListener('click', () => {
+        const promptText = promptInput.value;
+        const shirtColor = shirt.querySelector('path').getAttribute('fill');
+        const supplierUrl = 'URL_DO_FORNECEDOR'; // Substitua pela URL real do fornecedor
+
+        // Redireciona para o site do fornecedor com os parâmetros necessários
+        window.location.href = `${supplierUrl}?text=${encodeURIComponent(promptText)}&color=${encodeURIComponent(shirtColor)}`;
     });
-});
-
-document.getElementById('finalizarCompra').addEventListener('click', () => {
-    const prompt = document.getElementById('promptInput').value;
-    const tshirtColor = document.getElementById('tshirt').querySelector('path').getAttribute('fill');
-    const fornecedorUrl = `https://www.fornecedor.com/checkout?prompt=${encodeURIComponent(prompt)}&color=${encodeURIComponent(tshirtColor)}`;
-    window.location.href = fornecedorUrl;
 });
 
 
