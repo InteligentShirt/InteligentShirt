@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InteligentShirt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>InteligentShirt</h1>
+    </header>
+    <main>
+        <input type="text" id="promptInput" placeholder="Descreva sua estampa personalizada">
+        <div class="container">
+            <aside>
+                <div class="color-option" data-color="#000000" style="background-color: #000000;"></div>
+                <div class="color-option" data-color="#FFFFFF" style="background-color: #FFFFFF; border: 1px solid #000;"></div>
+                <div class="color-option" data-color="#FFFF00" style="background-color: #FFFF00;"></div>
+                <div class="color-option" data-color="#00008B" style="background-color: #00008B;"></div>
+                <div class="color-option" data-color="#006400" style="background-color: #006400;"></div>
+                <div class="color-option" data-color="#808080" style="background-color: #808080;"></div>
+            </aside>
+            <section>
+                <svg id="tshirt" viewBox="0 0 200 200">
+                    <!-- Desenho simplificado de uma camiseta -->
+                    <path d="M50,30 L150,30 L180,60 L180,150 L20,150 L20,60 Z" fill="none" stroke="#000" stroke-width="2"></path>
+                </svg>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <button id="finalizarCompra">Finalizar Compra</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
 
