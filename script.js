@@ -1,23 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const colorButtons = document.querySelectorAll('.color-btn');
-    const shirtPath = document.getElementById('shirt-path');
-    const finalizeBtn = document.getElementById('finalize-btn');
-    const promptInput = document.getElementById('prompt-input');
-
-    colorButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const color = button.getAttribute('data-color');
-            shirtPath.setAttribute('fill', color);
-        });
+document.querySelectorAll('.color-option').forEach(item => {
+    item.addEventListener('click', event => {
+        const color = event.target.getAttribute('data-color');
+        const tshirt = document.getElementById('tshirt').querySelector('path');
+        tshirt.setAttribute('fill', color);
     });
+});
 
-    finalizeBtn.addEventListener('click', () => {
-        const promptText = promptInput.value;
-        if (promptText) {
-            // Lógica para enviar os dados para o fornecedor
-            alert(`Compra finalizada com o texto: "${promptText}"`);
-        } else {
-            alert('Por favor, insira um texto personalizado.');
-        }
-    });
+document.getElementById('finalizarCompra').addEventListener('click', () => {
+    const prompt = document.getElementById('promptInput').value;
+    const tshirtColor = document.getElementById('tshirt').querySelector('path').getAttribute('fill');
+    const fornecedorUrl = `https://www.fornecedor.com/checkout?prompt=${encodeURIComponent(prompt)}&color=${encodeURIComponent(tshirtColor)}`;
+    window.location.href = fornecedorUrl;
 });
