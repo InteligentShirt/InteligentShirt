@@ -1,70 +1,66 @@
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    padding: 0;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
     background-color: #f8f8f8;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-#promptInput {
-    margin: 20px 0;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    font-size: 16px;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-aside {
-    display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.color-option {
-    width: 30px;
-    height: 30px;
-    margin: 5px;
+#prompt-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#preview-btn, #finalize-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
     cursor: pointer;
 }
 
-section {
-    position: relative;
+#preview-btn:hover, #finalize-btn:hover {
+    background-color: #0056b3;
 }
 
-svg {
+.shirt-container {
+    margin: 20px 0;
+}
+
+#shirt-svg {
     width: 200px;
     height: 200px;
 }
 
-footer {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+.color-picker {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-#finalizarCompra {
-    padding: 10px 20px;
-    font-size: 16px;
+.color-btn {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
 }
