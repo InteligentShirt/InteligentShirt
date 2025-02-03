@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Por favor, insira seu texto personalizado antes de finalizar a compra.');
             return;
         }
-        // Redirecionar para o site do fornecedor com os detalhes da personalização
+        // Redirecionar para o site do fornecedor com os detalhes da camiseta
         // Substitua 'URL_DO_FORNECEDOR' pela URL real do fornecedor
-        const fornecedorUrl = `URL_DO_FORNECEDOR?texto=${encodeURIComponent(userText)}&cor=${encodeURIComponent(shirtPath.getAttribute('fill'))}`;
-        window.location.href = fornecedorUrl;
+        window.location.href = `URL_DO_FORNECEDOR?texto=${encodeURIComponent(userText)}&cor=${encodeURIComponent(shirtPath.getAttribute('fill'))}`;
     });
 });
+
