@@ -12,14 +12,18 @@
     </header>
     <main>
         <div class="container">
-            <!-- Removido o campo de entrada de texto e o botão de pré-visualização -->
+            <input type="text" id="prompt-input" placeholder="Digite seu texto personalizado aqui">
+            <button id="preview-btn">Pré-visualizar</button>
+            
             <div class="shirt-container">
                 <svg id="shirt-svg" viewBox="0 0 200 200">
                     <!-- Contorno da camiseta -->
                     <path id="shirt-path" d="M50,20 L150,20 L170,50 L150,80 L150,180 L50,180 L50,80 L30,50 Z" stroke="black" fill="white"/>
-                    <!-- Elemento <text> removido -->
+                    <!-- Texto na camiseta -->
+                    <text id="shirt-text" x="100" y="110" text-anchor="middle" font-size="14" fill="black" dominant-baseline="middle"></text>
                 </svg>
             </div>
+
             <div class="color-picker">
                 <button class="color-btn" data-color="#000000" style="background-color: #000000;"></button>
                 <button class="color-btn" data-color="#FFFFFF" style="background-color: #FFFFFF;"></button>
@@ -29,8 +33,7 @@
                 <button class="color-btn" data-color="#FF0000" style="background-color: #FF0000;"></button>
                 <button class="color-btn" data-color="#808080" style="background-color: #808080;"></button>
             </div>
-            <!-- Botão para gerar design com IA -->
-            <button id="generate-design-btn">Gerar Design com IA</button>
+
             <button id="finalize-btn">Finalizar Compra</button>
         </div>
     </main>
